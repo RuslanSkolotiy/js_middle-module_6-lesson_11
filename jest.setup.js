@@ -31,6 +31,7 @@ const storage = {};
 const lSMock = {
     getItem: jest.fn((key) => storage[key] || null),
     setItem: jest.fn((key, val) => { storage[key] = val; }),
+    removeItem: jest.fn(key => delete storage[key]),
 }
 
 Object.defineProperty(window, 'localStorage', {

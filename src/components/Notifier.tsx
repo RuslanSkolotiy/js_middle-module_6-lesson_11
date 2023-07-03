@@ -23,8 +23,8 @@ export const Notifier = ({ task, open, onClose }: Props) => {
         return null;
     }
 
-    return(
-        <div className="blackout">
+    return (
+        <div className="blackout" data-testid='notifier'>
             <div className="notifier-wrapper">
                 {task}
             </div>
